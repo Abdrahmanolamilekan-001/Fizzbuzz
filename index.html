@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algrithm print all odd numbers</title>
+</head>
+<body>
+    <div id="display" style="font-size: 20px;text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;"></div>
+    <div id="display2" style="margin-top: -2000px; margin-left: 300px;font-size: 20px;font-family: Verdana, Geneva, Tahoma, sans-serif;"></div>
+    <script>
+         
+
+        for(i=1; i<= 100; i++){
+          if(i%3==0 && i%5==0){
+            display.innerHTML +=`<p style="color:green;">${i} is fizzbuzz </p>`
+          }else if(i%3==0){
+            display.innerHTML +=`<p style="color:blue;"> ${i} is fizz<p>`
+          }else if (i%5== 0){
+            display.innerHTML +=`<p style="color:red;">${i} is buzz <p>`
+          }else{
+            display.innerHTML +=`<p style="color:purple;">${i} is not recognised <p>`
+          }
+        }
+
+        for(i = 0; i<=100; i++){
+          var prime = true;
+          for(j = 2; j<i; j++)
+          {
+            if(i%j==0){
+              prime = false;
+              break;
+            }
+          }
+          if(prime){
+            display2.innerHTML += `<p style="color:blue;">${i} is a prime number</p>`
+          }
+        }
+    </script>
+</body>
+</html>
